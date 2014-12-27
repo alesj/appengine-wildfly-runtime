@@ -54,6 +54,10 @@ EXPOSE 8080
 # Wildfly HTTP Admin port number
 EXPOSE 9990
 
+# Widlfy JGroups Ports
+EXPOSE 7600
+EXPOSE 57600
+
 # Java VM debug port number
 EXPOSE 5005
 

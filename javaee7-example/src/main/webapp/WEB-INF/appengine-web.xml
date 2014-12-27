@@ -29,9 +29,21 @@ limitations under the License.
 	<vm-settings>
 		<setting name="machine_type" value="n1-standard-2" />
 	</vm-settings>
-	<manual-scaling>
-		<instances>1</instances>
-	</manual-scaling>
+  <automatic-scaling>
+    <min-num-instances>2</min-num-instances>
+    <max-num-instances>20</max-num-instances>
+    <cool-down-period-sec>60</cool-down-period-sec>
+    <cpu-utilization>
+      <target-utilization>0.5</target-utilization>
+    </cpu-utilization>
+  </automatic-scaling>
+
+  <network>
+    <forwarded-ports>
+      <forwarded-port>7600</forwarded-port>
+    </forwarded-ports>
+    <instance-tag>appengine</instance-tag>
+  </network>
 
 	<static-files>
 		<include path="/resources/**" expiration="0s" />
